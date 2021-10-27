@@ -1,0 +1,215 @@
+@keyframes traer{
+    0% {
+        transform: scaleY(.5);
+    }
+    40% {
+        transform: scaleY(1.02);
+    }
+    60% {
+        transform: scaleY(0.98);
+    }
+    80% {
+        transform: scaleY(1.01);
+    }
+    100% {
+        transform: scaleY(0.98);
+    }				
+    80% {
+        transform: scaleY(1.01);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+.actitudes body
+{
+    background-color: white;
+    align-content: center;
+    font-family: Arial;
+    margin:0;
+    animation-duration: 1.5s;
+    animation-name: traer;
+
+}
+.actitudes input[type=submit]
+{
+    border: none;
+    background: #0288D1;
+    color: #f2f2f2;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+}
+.actitudes input[type=submit]:hover {
+    background: rgba(0,0,0,0);
+    color: #0288D1;
+    box-shadow: inset 0 0 0 3px #0288D1;
+}
+.actitudes #titulo
+{
+    background-color: #0288D1;
+    color: white;
+    font-size: 35px;
+}
+.actitudes li a {
+    color: #0288D1;
+}
+.actitudes a.examenes {
+    background-color: #0288D1;
+    color: #fff;
+}
+.actitudes #contenido{
+    background-color: white;
+    font-family: Arial;
+    font-size: 20px;
+}
+.actitudes  #contenedor{ 
+    margin: 10px;
+    padding-bottom: 15px;
+} 
+.actitudes .clear { 
+    clear:both; 
+}
+.actitudes #opcion1, #opcion2, #opcion3 { 
+    border: 5px solid whitesmoke;
+    border-radius: 7px;
+    background:#fff; 
+    width: 1000px;
+    height: 310px;
+    margin:15px; 
+    float:left;
+    transition: all 500ms ease;
+}
+.actitudes #opcion1:hover, #opcion2:hover, #opcion3:hover { 
+    border-color: #0288D1;
+}
+.actitudes #texto1, #texto2, #texto3{
+    background-color: #0288D1;
+    position: absolute;
+    height: 310px;
+    width: 300px;
+    font-family: Arial;
+    font-size: 27px;
+    text-align: center;
+    color: white;
+    transition: all 500ms ease;
+}
+.actitudes #imagen1, #imagen2, #imagen3  {
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    width: 700px;
+    height: 310px;
+    float: right;
+    transition: all 500ms ease;
+
+}
+.actitudes #texto1:hover, #texto2:hover, #texto3:hover{
+    color: #0288D1;
+    background-color: white;
+}
+.actitudes iframe
+{
+    border: 0px;
+}
+.actitudes .radioex{
+    font-size: 20px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    height: 430px;
+}
+.actitudes #contenedor{
+    background-color: whitesmoke;
+    border: 5px solid gray;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: -100px;
+    margin-bottom: 50px;
+    position:relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: black;
+}
+
+.actitudes #opc{
+    clear: both;
+    margin: 0 50px;
+}
+
+.actitudes label {
+    width: 200px;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4
+}
+
+.actitudes input[type=radio]:empty {
+    margin-left: -100000000px;
+}
+
+.actitudes input[type=radio]:empty ~ label {
+    position: relative;
+    float: left;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    margin-top: 2em;
+    cursor: pointer;
+}
+
+.actitudes input[type=radio]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+    transition: all 500ms ease;
+}
+
+.actitudes input[type=radio]:hover:not(:checked) ~ label:before {
+    content:'\2714';
+    text-indent: .9em;
+    color: #C2C2C2;
+    transition: unset;
+}
+
+.actitudes input[type=radio]:hover:not(:checked) ~ label {
+    color: #888;
+}
+
+/* toggle on */
+.actitudes input[type=radio]:checked ~ label:before {
+    content:'\2714';
+    text-indent: .9em;
+    color: white;
+    background-color: #0288D1;
+}
+
+.actitudes input[type=radio]:checked ~ label {
+    color: #0288D1;
+    border-color: #0288D1;
+}
+
+/* radio focus */
+.actitudes input[type=radio]:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+.actitudes #titulo-pregunta{
+    font-size: 35px;
+    text-align: center;
+    color: #0288D1;
+}
+.actitudes #head-title{
+    background-color: #0288D1; 
+    color: white; 
+    font-size: 50px; 
+    text-align: center;
+    color: white; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
