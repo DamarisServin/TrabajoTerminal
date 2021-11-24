@@ -1,32 +1,17 @@
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
+/*
+    Inicialización del servidor
+*/
+import express from "express"
+import cors from "cors"
+import colecciones from "./api/colecciones.route.js"
 
-require('dotenv').config();
+const app = express()
 
-const app = express();
-const port = process.env.PORT || 10000;
+app.use(cors())                     
+app.use(express.json())         
 
-app.use(cors());
-app.use(express.json());
+//Rutas del servidor
+app.use("/api/colecciones", colecciones)
+app.use("*", (req, res) => res.status(404).json({ error: "Not Found"}))
 
-
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, {useNewUrlParser : true}
-);
-
-const connection = mongoose.connection;
-connection.once('open', () => {
-    console.log('MongoDB database connection established successfully');
-})
-
-const userRouter = require ('./routes/user');
-const escuelaRouter = require ('./routes/escuela');
-
-app.use('/user', userRouter);
-app.use('/escuela', escuelaRouter);
-
-app.listen(port, () =>{
-    console.log(`Server us running on port: ${port}`);
-
-})
+export default app
